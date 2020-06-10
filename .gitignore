@@ -1,0 +1,17 @@
+log.html
+output.xml
+report.html
+appium-screenshot-*.png
+selenium-screenshot-*.png
+appium-log.txt
+*.pyc
+.idea
+geckodriver.log
+*.DS_Store
+venv/
+*.wgt
+*.out
+cal.txt
+captured/
+rect/
+.pairs
