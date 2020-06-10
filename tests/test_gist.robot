@@ -2,6 +2,7 @@
 Resource              ../resource.robot
 Suite Teardown        Close All Browsers
 Test Setup            Open Web      ${URL}
+Test Teardown         Close Browser
 
 *** Test Case ***
 Test Create Public Gist
