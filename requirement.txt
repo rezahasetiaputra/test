@@ -1,0 +1,12 @@
+urllib3==1.24.3
+robotframework==3.1.2
+robotframework-appiumlibrary==1.4.6
+robotframework-faker==4.2.0
+robotframework-seleniumlibrary==3.3.1
+robotframework-pabot==0.44
+robotframework-debuglibrary==1.1.4
+robotframework-requests==0.5.0
+robotframework-xvfb==1.2.2
+lxml==4.3.1
+selenium==3.141.0
+xvfbwrapper==0.2.9
