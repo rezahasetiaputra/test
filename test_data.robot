@@ -4,8 +4,8 @@ ${URL_GIST}             https://gist.github.com/
 ${URL}                  https://github.com/
 ${VIRTUAL_DISPLAY}      false
 
-&{USER}               USERNAME=rezahasetiaputra
-...                   PASSWORD=test
+&{USER}               USERNAME=username
+...                   PASSWORD=password
 
 &{DATA_GIST}          FILENAME=testfile
 ...                   DESCRIPTION=test

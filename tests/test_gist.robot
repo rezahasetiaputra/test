@@ -6,41 +6,24 @@ Test Teardown         Close Browser
 
 *** Test Case ***
 Test Create Public Gist
-    Choose Sign in
-    Input UserName        ${USER.USERNAME}
-    Input Password        ${USER.PASSWORD}
-    Select Sign in Button
-    Verify in HomePage
-    Select Plus
-    Select New Gist
-    Verify In Gist Editor
-    Input Description       ${DATA_GIST.DESCRIPTION}
-    Input Filename          ${DATA_GIST.FILENAME}
-    Input On Text Area      ${DATA_GIST.NOTES}
-    Select Create Public Gist
-    Verify File Created With Name       ${DATA_GIST.FILENAME}
-    Verify Description Gist Created     ${DATA_GIST.DESCRIPTION}
-    Verify Note Created on File         ${DATA_GIST.FILENAME}     ${DATA_GIST.DESCRIPTION}
+    Login To github           ${USER}
+    Go To Gist Editor Page
+    Create New Public Gist        ${DATA_GIST}
+    Verify Public Gist Created    ${DATA_GIST}
 
 Test Edit Gist
-    Choose Sign in
-    Input UserName        ${USER.USERNAME}
-    Input Password        ${USER.PASSWORD}
-    Select Sign in Button
-    Verify in HomePage
-    Go To     https://gist.github.com/${USER.USERNAME}
+    Login To github         ${USER}
+    Go To Gist List Page    ${USER}
+    Select File             ${DATA_GIST.FILENAME}
     Select Edit Button
-    Input On Text Area        Change Note
+    Input On Text Area    Change Note
     Select Update Public Gist
+    Verify Public Gist Updated      ${DATA_GIST.FILENAME}       ${DATA_GIST.NOTES}Change Note
 
 Test Delete Gist
-    Choose Sign in
-    Input UserName      ${USER.USERNAME}
-    Input Password      ${USER.PASSWORD}
-    Select Sign in Button
-    Verify in HomePage
-    Go To     https://gist.github.com/${USER.USERNAME}
+    Login To github         ${USER}
+    Go To Gist List Page    ${USER}
     Select File             ${DATA_GIST.FILENAME}
-    Select Delete Button
-    Choose Yes To Delete
+    Delete Public Gist
+    Should Be In Gist List Page
     Verify File Deleted     ${DATA_GIST.FILENAME}

@@ -5,7 +5,7 @@ Library     Collections
 Library     String
 Library     DebugLibrary
 
-#Resource    logics/_LOGICS_IMPORT.robot
+Resource    logics/_LOGICS_IMPORT.robot
 Resource    pages/_PAGES_IMPORT.robot
 Resource    test_data.robot
 
